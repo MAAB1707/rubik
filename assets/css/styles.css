@@ -261,7 +261,6 @@ button{
 
 /*=============== HOME ===============*/
 .home__content{
-  margin-top: 8rem;
   row-gap: 1rem;
 }
 
@@ -665,13 +664,70 @@ button{
   object-fit: contain;
 }
 /*=============== NEWSLETTER ===============*/
+
 .newsletter{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
+
+
 .newsletter__container{
-  width: 45%;
+  width: 95%;
+}
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.inputBox{
+  position: relative;
+  width: 46%;
+}
+.inputBox:nth-last-of-type(1){
+  width: 94.4%;
+  
+}
+.inputBox input{
+  width: 100%;
+  padding: 15px;
+  border: 1.3px solid var(--title-color);
+  background: var(--container-colorr);
+  border-radius: 5px;
+  outline: none;
+  color: var(--text-color);
+  font-size: 1em;
+  transition: 0.5s;
+}
+.inputBox:last-of-type input{
+  min-height: 100px;
+}
+.inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: hsl(var(--hue), 4%, 70%);
+  text-transform: uppercase;
+  transition: 0.3s;
+
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+  color: hsl(var(--hue), 4%, 70%);
+  transform: translateX(10px) translateY(2px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: transparent;
+  /* border-left: 1px solid var(--first-color);
+  border-right: 1px solid var(--first-color); */
+  letter-spacing: 0.2em;
+} 
+.inputBox input:valid ,
+.inputBox input:focus{
+  border: 1px solid var(--title-color);
 }
 .newsletter__contacts{
   width: 45%;
@@ -863,6 +919,7 @@ button{
   }
 }
 
+
 /* For medium devices */
 @media screen and (min-width: 576px){
   .about__container{
@@ -871,7 +928,6 @@ button{
   }
 
   .newsletter__container{
-    display: grid;
     grid-template-columns: .7fr;
     justify-content: center;
   }

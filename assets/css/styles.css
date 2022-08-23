@@ -815,7 +815,7 @@ button{
   position: absolute;
   left: 0.75rem;
   bottom: 18rem;
-}1
+}
 .filtr-exit{
   width: 20px;
   height: 20px;
@@ -869,7 +869,6 @@ button{
 }
 .filtr .inputBox input{
   min-height: 20px;
-  font-size: 0.25em;
 }
 
 .inputBox span{
@@ -1071,7 +1070,7 @@ button{
   background: #000;
   border-radius: .5rem;
 }
-.filtr--type__all::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
+.filtr--type__all::-webkit-scrollbar{ width: 12px; /* 1 - вертикальный скроллбар */}
 .filtr--type__all::-webkit-scrollbar-thumb{background: var(--body-color)}
 .filtr--type__all::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
 .filtr--type__all::-webkit-scrollbar-thumb {

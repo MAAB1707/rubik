@@ -812,7 +812,10 @@ button{
 }
 .filtr-save{
   background: #46811e;
-}
+  position: absolute;
+  left: 0.75rem;
+  bottom: 18rem;
+}1
 .filtr-exit{
   width: 20px;
   height: 20px;

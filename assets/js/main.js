@@ -39,6 +39,7 @@ let homeSwiper = new Swiper(".home-swiper", {
         clickable: true,
       },
 })
+// show filtr{
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader(){
@@ -133,3 +134,47 @@ receiptBtn.addEventListener('click', function(){
 
     }, 500);
 })
+const FTheme = document.querySelector('.filtr__theme')
+const FIltr = document.querySelector('.filtr')
+const FExit = document.querySelector('.filtr-exit')
+FTheme.addEventListener('click', function(){
+    if(FIltr.classList.contains('filtr-show')){
+        FIltr.classList.remove('filtr-show')
+    }else{
+        FIltr.classList.add('filtr-show')
+
+    }
+})
+FExit.addEventListener('click', function(){
+    FIltr.classList.remove('filtr-show')
+
+})
+const tButton = document.querySelectorAll('.types--button')
+const allTypes = document.querySelectorAll('.filtr--type__all')
+tButton.forEach((button, key) =>{
+    button.addEventListener('click', function(){
+        if(allTypes[key].style.height == '150px'){
+            allTypes[key].style.height = '0'
+        }else{
+            allTypes[key].style.height = '150px'
+        }
+    })
+})
+const types = document.querySelectorAll('.type')
+const Checking = document.querySelectorAll('.type span')
+Checking.forEach((check, key) =>{
+    check.addEventListener('click', function(){
+        if(types[key].classList.contains('checked')){
+            types[key].classList.remove('checked')
+        }else{
+            types.forEach((type, key)=>{
+                types[key].classList.remove('checked')
+
+            })
+            types[key].classList.add('checked')
+
+        }
+    })
+})
+
+

@@ -79,6 +79,7 @@ html{
 }
 
 body{
+
   position: relative;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -142,6 +143,7 @@ button{
 
 .main{
   overflow: hidden; /*For animation*/
+  position: relative;
 }
 
 /*=============== HEADER ===============*/
@@ -261,7 +263,6 @@ button{
 
 /*=============== HOME ===============*/
 .home__content{
-  margin-top: 8rem;
   row-gap: 1rem;
 }
 
@@ -419,7 +420,7 @@ button{
 .trick__container{
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  padding-top: 1rem;
+  padding: 0;
 }
 
 .trick__content{
@@ -664,14 +665,248 @@ button{
   width: 30%;
   object-fit: contain;
 }
+/* filt */
+.filtr--cont{
+  height: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem
+}
+.filtr--cont h4{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filtr{
+  width: 0px;
+  height: 100vh;
+  position: fixed;
+  top: 4rem;  
+  left: 0;
+  z-index: 50;
+  overflow: hidden;
+  scrollbar-face-color: #33b5e5;
+  -webkit-overflow-scrolling: var(--first-color-alt);
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px #00000046 ;
+  background: var(--container-color);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0rem;
+}
+.filtr-show{
+  width: 300px;
+  padding: 1rem;
+}
+.filtr--type{
+  position: relative;
+}
+.filtr--type input{
+  width: 250px;
+  border-radius: 5px;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  border: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #008000;
+  border: 20px;
+  opacity: 0;
+}
+
+::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
+::-webkit-scrollbar-thumb{background: var(--body-color)}
+::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
+
+
+.filtr--type__all{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  border-radius: 2px;
+  border: 5px;
+  box-shadow: 2px 5px 2px #00000046 ;
+  position: absolute;
+  overflow-y: scroll;
+  z-index: 20;
+  scroll-margin: 5rem;
+  padding: 0 0.2rem;
+  transition: 0.3s;
+  background: #FFFF;
+}
+.open-check{
+  height: 150px;
+  background: transparent;
+  flex-direction: row;
+  position: relative;
+  overflow: unset;
+  box-shadow: unset;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  z-index: 0;
+
+}
+.filtr--type__all .type span{
+  width: 15px;
+  height: 15px;
+  background: #Ffffff;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 2px #00000067;
+  cursor: pointer;
+  border: 1px solid #0000008c;
+}
+.filtr--type__all .type span::before,
+.filtr--type__all .type span::after{
+  height: 2px;
+  display: flex;
+  scale: 0;
+  border-end-end-radius: 2px;
+  border-start-start-radius: 2px;
+  content: '';
+  transition: scale 0.3s;
+  background: #000;
+}
+.filtr--type__all .type.checked span::before,
+.filtr--type__all .type.checked span::after{
+ 
+  scale: 1;
+  
+}
+.filtr--type__all .type span::before{
+  transform: rotate(45deg) translate(5px, 2.9px);
+  width: 5px;
+
+}
+.filtr--type__all .type span::after{
+  transform: rotate(-50deg) translate(0px, 5px);
+  width: 8px;
+  
+
+}
+.filtr--type__all .type{
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
+  color:black;
+}
+.open-check .type{
+  color: #FFFFFF;
+}
+.filts-se{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filtr-save,
+.filtr-exit{
+  padding: 0.75rem 0;
+  border-radius: 10px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+.filtr-save i,
+.filtr-exit i{
+  font-size: 20px;
+}
+.filtr-save{
+  background: #46811e;
+}
+.filtr-exit{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  border-radius: 2px;
+  right: 0;
+  padding: 0 0;
+  background: var(--first-color);
+}
+
 /*=============== NEWSLETTER ===============*/
+
 .newsletter{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
+
+
 .newsletter__container{
-  width: 45%;
+  width: 95%;
+}
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.inputBox{
+  position: relative;
+  width: 46%;
+}
+.inputBox:nth-last-of-type(1){
+  width: 94.4%;
+  
+}
+.inputBox input{
+  width: 100%;
+  padding: 15px;
+  border: 1.3px solid var(--title-color);
+  background: var(--container-colorr);
+  border-radius: 5px;
+  outline: none;
+  color: var(--text-color);
+  font-size: 1em;
+  transition: 0.5s;
+}
+.inputBox:last-of-type input{
+  min-height: 100px;
+}
+.filtr .inputBox input{
+  min-height: 20px;
+  font-size: 0.25em;
+}
+
+.inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: hsl(var(--hue), 4%, 70%);
+  text-transform: uppercase;
+  transition: 0.3s;
+
+}
+.filtr .inputBox span{
+  min-height: 20px;
+  font-size: 0.75em;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+  color: hsl(var(--hue), 4%, 70%);
+  transform: translateX(10px) translateY(2px);
+  font-size: 0.55em;
+  padding: 0 10px;
+  background: transparent;
+  /* border-left: 1px solid var(--first-color);
+  border-right: 1px solid var(--first-color); */
+  letter-spacing: 0.2em;
+} 
+.inputBox input:valid ,
+.inputBox input:focus{
+  border: 1px solid var(--title-color);
 }
 .newsletter__contacts{
   width: 45%;
@@ -798,7 +1033,11 @@ button{
   font-size: var(--smaller-font-size);
   margin-top: 4.5rem;
 }
-
+/* how to */
+.howTo{
+  
+  margin-top: 6rem;
+}
 /*=============== SCROLL UP ===============*/
 .scrollup{
   position: fixed;
@@ -835,7 +1074,6 @@ button{
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #272525;
   border-radius: .5rem;
 }
 
@@ -863,6 +1101,7 @@ button{
   }
 }
 
+
 /* For medium devices */
 @media screen and (min-width: 576px){
   .about__container{
@@ -871,7 +1110,6 @@ button{
   }
 
   .newsletter__container{
-    display: grid;
     grid-template-columns: .7fr;
     justify-content: center;
   }
@@ -884,9 +1122,11 @@ button{
   body{
     margin: 0;
   }
-
+  .filtr{
+    top: 5rem;
+  }
   .section{
-    padding: 7rem 0 2rem;
+    padding: 3rem 0 2rem;
   }
 
   .nav{
@@ -987,7 +1227,7 @@ button{
     font-size: var(--h1-font-size);
     margin-bottom: 3rem;
   }
-
+  
   .home__content{
     padding-top: 9rem;
     gap: 3rem;
@@ -1073,6 +1313,7 @@ button{
 
   .footer__copy{
     margin-top: 6rem;
+    color: var(--text-color);
   }
 }
 

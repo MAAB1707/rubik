@@ -79,7 +79,6 @@ html{
 }
 
 body{
-
   position: relative;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -687,8 +686,6 @@ button{
   left: 0;
   z-index: 50;
   overflow: hidden;
-  scrollbar-face-color: #33b5e5;
-  -webkit-overflow-scrolling: var(--first-color-alt);
   border-radius: 5px;
   box-shadow: 2px 2px 0px #00000046 ;
   background: var(--container-color);
@@ -714,15 +711,13 @@ button{
   padding: 0.2rem;
   border: none;
 }
-::-webkit-scrollbar-thumb {
+.filtr--type__all ::-webkit-scrollbar-thumb {
   background: #008000;
   border: 20px;
   opacity: 0;
 }
 
-::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
-::-webkit-scrollbar-thumb{background: var(--body-color)}
-::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
+
 
 
 .filtr--type__all{
@@ -1074,9 +1069,17 @@ button{
 }
 
 ::-webkit-scrollbar-thumb{
+  background: #000;
   border-radius: .5rem;
 }
-
+.filtr--type__all ::-webkit-scrollbar-thumb {
+  background: #008000;
+  border: 20px;
+  opacity: 0;
+}
+.filtr--type__all ::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
+.filtr--type__all ::-webkit-scrollbar-thumb{background: var(--body-color)}
+.filtr--type__all ::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
 /*===============  BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){

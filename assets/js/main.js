@@ -155,7 +155,11 @@ tButton.forEach((button, key) =>{
     button.addEventListener('click', function(){
         if(allTypes[key].style.height == '150px'){
             allTypes[key].style.height = '0'
-        }else{
+        }else{           
+            allTypes.forEach((type, key)=>{
+                allTypes[key].style.height = '0'
+
+            })
             allTypes[key].style.height = '150px'
         }
     })

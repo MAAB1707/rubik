@@ -708,7 +708,7 @@ button{
   text-align: left;
   outline: none;
   cursor: pointer;
-  padding: 0.2rem;
+  padding: 0.55rem;
   border: none;
 }
 .filtr--type__all ::-webkit-scrollbar-thumb {

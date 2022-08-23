@@ -680,7 +680,7 @@ button{
 
 .filtr{
   width: 0px;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 4rem;  
   left: 0;
@@ -814,7 +814,6 @@ button{
   background: #46811e;
   position: absolute;
   left: 0.75rem;
-  bottom: 18rem;
 }
 .filtr-exit{
   width: 20px;

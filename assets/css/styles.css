@@ -717,9 +717,6 @@ button{
   opacity: 0;
 }
 
-
-
-
 .filtr--type__all{
   width: 200px;
   display: flex;
@@ -1071,14 +1068,15 @@ button{
   background: #000;
   border-radius: .5rem;
 }
-.filtr--type__all ::-webkit-scrollbar-thumb {
+.filtr--type__all::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
+.filtr--type__all::-webkit-scrollbar-thumb{background: var(--body-color)}
+.filtr--type__all::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
+.filtr--type__all::-webkit-scrollbar-thumb {
   background: #008000;
   border: 20px;
   opacity: 0;
 }
-.filtr--type__all::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
-.filtr--type__all::-webkit-scrollbar-thumb{background: var(--body-color)}
-.filtr--type__all::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
+
 /*===============  BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){

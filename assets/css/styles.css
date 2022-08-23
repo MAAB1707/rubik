@@ -762,7 +762,6 @@ button{
   height: 2px;
   display: flex;
   scale: 0;
-  border-end-end-radius: 2px;
   border-start-start-radius: 2px;
   content: '';
   transition: scale 0.3s;
@@ -1077,9 +1076,9 @@ button{
   border: 20px;
   opacity: 0;
 }
-.filtr--type__all ::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
-.filtr--type__all ::-webkit-scrollbar-thumb{background: var(--body-color)}
-.filtr--type__all ::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
+.filtr--type__all::-webkit-scrollbar{ width: 22px; /* 1 - вертикальный скроллбар */}
+.filtr--type__all::-webkit-scrollbar-thumb{background: var(--body-color)}
+.filtr--type__all::-webkit-scrollbar-track-piece { background: #FFFFFF; /* 4 – видимая часть трека */ }
 /*===============  BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px){

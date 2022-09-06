@@ -1026,9 +1026,70 @@ button{
   margin-top: 4.5rem;
 }
 /* how to */
-.howTo{
-  
+.howTo{  
   margin-top: 6rem;
+}
+/* basketlink */
+.nav__item{
+  position: relative;
+}
+.basketlink{
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  
+  right: -0.35rem;
+  background: red;
+  opacity: 0.8;
+}
+/* basket */
+.basket{
+  width: 100%;
+  margin-top: 6rem;
+}
+.basket{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.basket__amount{
+  width: 100%;
+  text-align: right;
+}
+.basket__list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.basket__list-prod{
+  width: 90%;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basket-produc--other{
+  display: flex;
+  justify-content: space-evenly;
+}
+.basket-prodc--img{
+  width: 130px;
+}
+.basket-produc--other form{
+  width: 30%;
+}
+.basket-produc--other .inputBox:last-of-type input{
+  width: 100%;
+  min-height: unset;
+}
+.basket-produc--other .inputBox:nth-last-of-type(1){
+  width: 100%;
+  display: block;
+  min-height: unset;
 }
 /*=============== SCROLL UP ===============*/
 .scrollup{

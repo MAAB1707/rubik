@@ -671,6 +671,19 @@ button{
   cursor: pointer;
   justify-content: center;
 }
+/* article */
+.article{
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.article img{
+  width: 300px;
+  object-fit: contain;
+}
+
 /* filt */
 .filtr--cont{
   height: 100;

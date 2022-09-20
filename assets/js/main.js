@@ -99,41 +99,7 @@ sr.reveal(`.category__data, .trick__content, .footer__content`,{interval: 100})
 sr.reveal(`.about__data, .discount__img`,{origin: 'left'})
 sr.reveal(`.about__img, .discount__data`,{origin: 'right'})
 // products
-const addCart = document.querySelectorAll('.trick__button-read')
-const receipt = document.querySelector('.about_pro')
-const receiptWindow = document.querySelector('.about_products')
-const receiptBtn = document.querySelector('.exit')
 
-addCart.forEach((cart, key) => {
-    cart.addEventListener('click', function(){  
-  
-  
-        receipt.style.display = 'flex'
-        setTimeout(function(){
-          receipt.style.opacity = '1'
-        },100)
-        setTimeout(() => {
-          receiptWindow.style.top = '10%'
-        }, 300);
-        setTimeout(() => {
-          receiptWindow.style.opacity = '1'
-        }, 500);
-      })
-});
-
-receiptBtn.addEventListener('click', function(){
-    setTimeout(function(){
-      receipt.style.opacity = '0'
-    },100)
-    setTimeout(() => {
-      receiptWindow.style.top = '-10%'
-    }, 300);
-    setTimeout(() => {
-      receiptWindow.style.opacity = '0'
-      receipt.style.display = 'none'
-
-    }, 500);
-})
 const FTheme = document.querySelector('.filtr__theme')
 const FIltr = document.querySelector('.filtr')
 const FExit = document.querySelector('.filtr-exit')

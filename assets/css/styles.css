@@ -664,6 +664,13 @@ button{
   width: 30%;
   object-fit: contain;
 }
+/* other propducts */
+.others-prod{
+  display: flex;
+  margin-top: 2rem;
+  cursor: pointer;
+  justify-content: center;
+}
 /* filt */
 .filtr--cont{
   height: 100;
